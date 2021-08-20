@@ -1,0 +1,25 @@
+- npm install: tạo lại thư mục node_modules
+- npm start: khởi chạy project
+
+- Baitap1Component
+    - Header
+    - Content 
+    - Sidebar 
+    - Footer
+
+- Baitap2Component
+    - Header
+    - Carousel 
+    - WWD
+    - Contact 
+    - ListCard
+        - Card
+        - Card
+        - Card
+    - Footer
+
+
+===== Buổi 1 =====
+    - Component jsx
+        + Stateful Component: class 
+        + Stateless Component: function

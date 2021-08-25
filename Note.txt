@@ -18,8 +18,15 @@
         - Card
     - Footer
 
-
+link repo: https://github.com/dpnguyen53/bc14reactjs
 ===== Buổi 1 =====
     - Component jsx
         + Stateful Component: class 
         + Stateless Component: function
+
+
+===== Buổi 2 ======
+* Rendering Elements: {}
+* Handling Events:  onClick
+* State: nếu như state thay đổi => component sẽ render lại
+* List keys: duyệt mảng

@@ -30,3 +30,13 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
 * Handling Events:  onClick
 * State: nếu như state thay đổi => component sẽ render lại
 * List keys: duyệt mảng
+
+===== Buổi 3 ======
+* Communication
+    - Props: Truyền dữ liệu từ component cha => component con
+        + class: Nhận props thông qua từ khoá this => this.props
+        + function: Nhận props thông qua tham số của function(props)
+        + children: Nhận tất cả những gì từ component cha truyền qua
+    - Lifting State Up: Truyền dữ liệu từ component con => component cha
+        Component cha truyền vào component con 1 props 
+        => props này mang giá trị là 1 functuon (hàm này giúp component cha nhận dc dữ liệu từ component con)

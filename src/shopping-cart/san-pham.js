@@ -17,7 +17,14 @@ export default class SanPham extends Component {
             >
               Chi tiết
             </button>
-            <button className="btn btn-danger">Thêm giỏ hàng</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => {
+                this.props.getProductAddCart(product);
+              }}
+            >
+              Thêm giỏ hàng
+            </button>
           </div>
         </div>
       </div>

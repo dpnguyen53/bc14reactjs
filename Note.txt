@@ -40,3 +40,8 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
     - Lifting State Up: Truyền dữ liệu từ component con => component cha
         Component cha truyền vào component con 1 props 
         => props này mang giá trị là 1 functuon (hàm này giúp component cha nhận dc dữ liệu từ component con)
+
+
+===== Buổi 4 ======
+    * Shopping cart
+    

@@ -43,5 +43,10 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
 
 
 ===== Buổi 4 ======
-    * Shopping cart
-    
+* Shopping cart
+* Usermanagement
+
+===== Buổi 5 ======
+* Usermanagement
+* Form
+* Lifecycle: componentWillReceiveProps

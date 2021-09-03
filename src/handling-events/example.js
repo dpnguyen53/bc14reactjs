@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 export default class ExampleHanldeEvent extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    //bind phuong thuc handleLogin
-    // this.handleLogin = this.handleLogin.bind(this);
-  }
+  //bind phuong thuc handleLogin
+  // this.handleLogin = this.handleLogin.bind(this);
+  // }
 
   username = "Cybersoft";
   isLogin = false; //false chua login

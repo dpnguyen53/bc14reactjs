@@ -6,7 +6,12 @@ class Users extends Component {
     const { userList, getUserDelete } = this.props;
     return userList.map((user) => {
       return (
-        <UserItem key={user.id} user={user} getUserDelete={getUserDelete} />
+        <UserItem
+          key={user.id}
+          user={user}
+          getUserDelete={getUserDelete}
+          getUserEdit={this.props.getUserEdit}
+        />
       );
     });
   };

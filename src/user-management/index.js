@@ -9,6 +9,8 @@ class Home extends Component {
     super(props);
     this.state = {
       userList: data,
+      keyword: "",
+      userEdit: null,
     };
   }
 
@@ -28,12 +30,58 @@ class Home extends Component {
     }
   };
 
+  //Hàm này nhận keyword từ component Search truyền ra
+  handleGetKeyword = (keyword) => {
+    this.setState({
+      keyword,
+    });
+  };
+
+  //Hàm này nhận user từ component Model truyền ra
+  handleOnSubmit = (user) => {
+    /**
+     * Thêm user vào state.userList
+     *  - Clone state.userList thành mảng mới
+     *  - Tạo id trong user trước khi thêm vào state.userList
+     */
+
+    if (user.id) {
+      //update
+    } else {
+      //add
+    }
+
+    const userNew = { ...user, id: new Date().getTime() };
+
+    let userList = [...this.state.userList, userNew];
+
+    this.setState({
+      userList,
+    });
+  };
+
+  //Hàm này nhận user từ component UserItem truyền ra
+  handleUserEdit = (user) => {
+    this.setState({
+      userEdit: user,
+    });
+  };
+
   render() {
+    const { keyword, userEdit } = this.state;
+    /**
+     * Duyệt mảng this.state.userList bằng filter
+     * Điều kiện tìm kiếm keyword có trùng với lại user.fullname hay không? (Chuyển text về viết thường)
+     */
+    const userList = this.state.userList.filter((user) => {
+      return user.fullname.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
+    });
+
     return (
       <div className="container">
         <h1 className="display-4 text-center my-3">User Management</h1>
         <div className="d-flex justify-content-between align-items-center">
-          <Search />
+          <Search getKeyword={this.handleGetKeyword} />
           <button
             className="btn btn-success"
             data-toggle="modal"
@@ -43,10 +91,11 @@ class Home extends Component {
           </button>
         </div>
         <Users
-          userList={this.state.userList}
+          userList={userList}
           getUserDelete={this.handleDeleteUser}
+          getUserEdit={this.handleUserEdit}
         />
-        <Modal />
+        <Modal getUserSubmit={this.handleOnSubmit} userEdit={userEdit} />
       </div>
     );
   }

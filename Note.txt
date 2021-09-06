@@ -50,3 +50,7 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
 * Usermanagement
 * Form
 * Lifecycle: componentWillReceiveProps
+
+===== Buổi 6 ======
+* Redux
+    - npm install redux react-redux --save 

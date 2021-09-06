@@ -9,7 +9,8 @@ import ExampleCar from "./example-car";
 import ListsKeys from "./lists-keys";
 import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
-import Home from "./user-management";
+// import Home from "./user-management";
+import HomeRedux from "./user-management-redux";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       <hr />
       <LiftingStateUpCart />
       <hr />
-      <Home />
+      {/* <Home /> */}
+      <HomeRedux />
 
       <br />
       <br />

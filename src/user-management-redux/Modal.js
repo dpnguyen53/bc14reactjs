@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { actUserSubmit } from "./../redux/actions";
 
 class Modal extends Component {
   constructor(props) {
@@ -151,4 +153,18 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const mapStateToProps = (state) => {
+  return {
+    userEdit: state.userReducer.userEdit,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getUserSubmit: function (user) {
+      dispatch(actUserSubmit(user));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

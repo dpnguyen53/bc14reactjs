@@ -1,3 +1,5 @@
+import * as ActionType from "./../constants";
+
 const initialState = {
   userList: [
     {
@@ -23,7 +25,7 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "DELETE_USER": {
+    case ActionType.DETELE_USER: {
       let userList = [...state.userList];
       const index = userList.findIndex((user) => user.id === action.payload.id);
       if (index !== -1) {
@@ -34,8 +36,35 @@ const userReducer = (state = initialState, action) => {
       return { ...state };
     }
 
-    case "GET_KEYWORD": {
+    case ActionType.GET_KEYWORD: {
       state.keyword = action.payload;
+      return { ...state };
+    }
+
+    case ActionType.ON_SUBMIT: {
+      let userList = [...state.userList];
+
+      if (action.payload.id) {
+        //Update
+        const index = userList.findIndex(
+          (user) => user.id === action.payload.id
+        );
+        if (index !== -1) {
+          userList[index] = action.payload;
+        }
+      } else {
+        //Add
+        const userNew = { ...action.payload, id: new Date().getTime() };
+        userList.push(userNew);
+      }
+
+      state.userList = userList;
+
+      return { ...state };
+    }
+
+    case ActionType.EDIT_USER: {
+      state.userEdit = action.payload;
       return { ...state };
     }
 

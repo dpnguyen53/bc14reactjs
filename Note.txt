@@ -54,3 +54,7 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
 ===== Buổi 6 ======
 * Redux
     - npm install redux react-redux --save 
+
+===== Buổi 7 ======
+* Redux
+* Lifecycle

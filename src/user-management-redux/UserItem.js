@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { actUserDelete, actUserEdit } from "./../redux/actions";
 
 class UserItem extends Component {
   render() {
@@ -44,13 +45,12 @@ const mapDispatchToProps = (dispatch) => {
      * - value: là 1 phương thức
      */
     getUserDelete: (user) => {
-      //Tạo action
-      const action = {
-        type: "DELETE_USER",
-        payload: user,
-      };
       //Gửi action vào store
-      dispatch(action);
+      dispatch(actUserDelete(user));
+    },
+
+    getUserEdit: (user) => {
+      dispatch(actUserEdit(user));
     },
   };
 };

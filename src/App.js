@@ -11,6 +11,7 @@ import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
 // import Home from "./user-management";
 import HomeRedux from "./user-management-redux";
+import Lifecycle from "./lifecycle";
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
       <hr />
       {/* <Home /> */}
       <HomeRedux />
+      <hr />
+      <Lifecycle />
 
       <br />
       <br />

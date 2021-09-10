@@ -11,14 +11,7 @@ class Users extends Component {
     });
 
     return userList?.map((user) => {
-      return (
-        <UserItem
-          key={user.id}
-          user={user}
-          // getUserDelete={getUserDelete}
-          getUserEdit={this.props.getUserEdit}
-        />
-      );
+      return <UserItem key={user.id} user={user} />;
     });
   };
 

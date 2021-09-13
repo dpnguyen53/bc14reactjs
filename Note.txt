@@ -58,3 +58,8 @@ link repo: https://github.com/dpnguyen53/bc14reactjs
 ===== Buổi 7 ======
 * Redux
 * Lifecycle
+
+===== Buổi 8 ======
+* Lifecycle
+* Form Validation
+* Install bootstrap

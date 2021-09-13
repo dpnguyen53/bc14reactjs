@@ -11,7 +11,8 @@ import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
 // import Home from "./user-management";
 import HomeRedux from "./user-management-redux";
-import Lifecycle from "./lifecycle";
+// import Lifecycle from "./lifecycle";
+import FormValidation from "./form-validation";
 
 function App() {
   return (
@@ -37,7 +38,9 @@ function App() {
       {/* <Home /> */}
       <HomeRedux />
       <hr />
-      <Lifecycle />
+      {/* <Lifecycle /> */}
+      <hr />
+      <FormValidation />
 
       <br />
       <br />

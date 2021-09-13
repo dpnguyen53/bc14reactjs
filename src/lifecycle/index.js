@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Child from "./child";
+import Child2 from "./child2";
 
 export default class Lifecycle extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class Lifecycle extends Component {
 
     this.state = {
       number: 0,
+      status: true,
     };
   }
 
@@ -39,6 +41,10 @@ export default class Lifecycle extends Component {
     return true;
   }
 
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+  }
+
   render() {
     console.log("render");
     return (
@@ -57,6 +63,18 @@ export default class Lifecycle extends Component {
         </button>
         <hr />
         <Child />
+        <hr />
+        {this.state.status && <Child2 number={this.state.number} />}
+        <button
+          className="btn btn-danger"
+          onClick={() => {
+            this.setState({
+              status: false,
+            });
+          }}
+        >
+          Change status
+        </button>
       </div>
     );
   }
